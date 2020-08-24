@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일 청첩장</title>
+    <style>
+        /* 인터널 css?
+            간결, 중복x, 구분(css, html)
+            1. 요소 : 전체 지정     h1에 크기, 서체는 무엇으로 해라 할 때 ()
+            2. 아이디 : 하나 지정
+            3. 클래스 : 포함이 되는 그룹 지정할 때, 클래스 이름은 내가 정한다. .을 찍어주세요. 반이름은 여러군데에서 쓰일 수 있다.
+            img { width:100%;  } 이미지 태그에 전체 100% 적용될거면 이렇게 쓸 것
+            class 한 반이 가진 속성을 의미할 때, 그룹으로 지정할 때
+            id : 한명의 학생 (한 학생이 가진 고유하고, 특별한 속성)
+            p : 단락
+            div : 공간을 나누고 싶을 때,
+
+            요소에 높이와 너비를 정할 때 이미지가
+            패딩 : 기본 0 
+            마진 : 상대적인 
+            CSS 상자모델
+            100% 화면에 맞게 100%
+            이미지 높이가 늘어나는거 좋지 x 
+            line-height: 행이 벌어지는것, 패딩을 준것처럼 (한줄의 자체 높이) - 바람직하지 x
+
+
+          */
+         h1{text-align: center; margin-top: 100px; margin-bottom: 0; font-family: serif;}
+        
+        .text-green{color:green;}
+        .sns_img{width: 25%;}
+
+        /* *  {border:1px dashed red;} */
+        /* * : 전체를 의미, 모든 요소 
+        위처럼 모든 요소에 테두리를 넣어주고 정렬하면 시각적으로 보면서 할 수 있다.
+        h1의 기본 속성자체가 화면 끝까지 가게되어서 너비값을 안줘도 자동으로 줄 전체를 차지한다. - 이런것을 block level
+        
+        br 태그는 박스가 없다.
+        바깥에 있는 요소는 body 요소, 박스, 사각형 모양이다.
+
+        패딩과 마진은 박스 공간이 있음으로 구분이 가능하다.
+        안쪽에 여백을 주는것 : padding
+        바깥쪽에 여백을 주는것 : margin
+
+        block : 
+        in-line 레벨의 요소 : span
+        보이지 않는 테두리가 경계가 되는게 부딪히면 되지 않는다.  
+
+        안좋은 코드
+        중복 태그가 많다.
+        -> 코드가 간결한게 좋다. (빨리 인식이되고, 빨리 고칠수 있고, 누구나 쉽게 해석할 수 있게)
+        정렬
+        코드의 정확성은 기본
+
+        */
+    </style>
+</head>
+<body style="margin:0;"> 
+ 
+    <div style="
+        position: relative;
+        background-image: url(/img/plant-03.jpg);
+        height: 100vh;
+        background-size: cover;">
+            <div style="
+                position:absolute;
+                top:26%;
+                left: 34%;
+                transform: 5rem;
+                z-index: 2;
+                text-align: center;
+                font-family: serif;">
+                <h1>우리 결혼합니다</h1>
+
+                <h2 class="text_green">05/30</h2>
+
+            </div>
+            <div style="
+                position:absolute;
+                top:50%;
+                left: 34%;
+                transform: 5rem;
+                z-index: 2;
+                text-align: center;
+                font-family: serif;">
+
+                <h3>김주원 * 송송이</h3>
+
+                <p style="line-height: 2; font-weight: 500;">
+                2020.05.30 SAT 12:00 PM <br>
+                풍컨벤션웨딩 7층 라온제나홀</p>
+            </div>
+     </div>
+        
+
+ 
+
+    <div style="background-color: #fbfbfb; padding-top: 100px;
+        padding-bottom: 100px;
+        margin: 0;">
+        <img src="/img/title_img_1.jpg" alt="초대합니다"
+        style="width: 100%; margin: 0; color: #fbfbfb; "
+        >
+        <p style="
+            padding-top: 60px;
+            text-align: center;
+            font-family: serif;
+            line-height: 1.8;
+            font-weight: 600;
+        ">
+            평생을 같이하고 싶은 사람을 만났습니다. <br>
+            서로 아끼며 이해하고, 사랑하며 살겠습니다. <br>
+            저희 약속 위에 따뜻한 격려로 축복해 주시면 <br>
+            감사하겠습니다.
+        </p>
+    </div> 
+    
+    <img src="/img/img1.jpg" alt="결혼사진" style="width:100%;">
+    <div style="padding-top: 36px; padding-bottom: 36px;">
+        <p
+        style="text-align: center;">
+        <span style="font-family: serif; font-weight: 600;">신랑에게 축하인사</span> 
+            <img src="/img/call25.png" style="margin-left: 50px; vertical-align: middle;" alt="">
+            <img src="/img/sms.png" style="margin-left: 50px; vertical-align: middle; margin-right: 25px;" alt="">
+        </p> 
+    
+        <p style="text-align: center;">
+            <span style="font-family: serif; font-weight: 600;">신부에게 축하인사</span> 
+            <img src="/img/call25.png" style="margin-left: 50px; vertical-align: middle;" alt="">
+            <img src="/img/sms.png" style="margin-left: 50px; vertical-align: middle; margin-right: 25px;" alt="">
+        </p>
+    </div>
+
+    <h2 style="background-color: #637e52;
+    color: white;
+    font-family: serif;
+    text-align: center; 
+    line-height: 50px;
+    height: 50px;
+    margin: 0;
+    ">혼주분께 연락하기</h2>
+    
+    <div style="display: flex;
+    background-color: #eaf1e6;
+    padding-top: 100px;
+    padding-bottom: 100px;">
+        <div style="width:50%; text-align: center;">
+            <span style="line-height: 4;">신랑측 혼주 </span> <br>
+            아버지 유도기 <br>
+            <img src="/img/call25.png" style="vertical-align: middle; margin-right: 20px;" alt=""> 
+            <img src="/img/sms.png" style="vertical-align: middle;" alt=""><br>
+            어머니 이순오 <br>
+            <img src="/img/call25.png" style="vertical-align: middle; margin-right: 20px;" alt="">
+            <img src="/img/sms.png" style="vertical-align: middle;" alt="">
+        </div>    
+        <div  style="width:50%; text-align: center;">
+           <span style="line-height: 4;"> 신부측 혼주 </span><br>
+            아버지 이중호 <br>
+            <img src="/img/call25.png" style="vertical-align: middle; margin-right: 20px;"  alt="">
+            <img src="/img/sms.png" style="vertical-align: middle;" alt=""><br>
+            어머니 고영심 <br>
+            <img src="/img/call25.png" style="vertical-align: middle; margin-right: 20px;" alt="">
+            <img src="/img/sms.png" style="vertical-align: middle;" alt="">
+        </div>
+    </div>
+
+    <img src="/img/title_img_4.jpg" style="width: 100%; padding-top: 100px; padding-bottom: 100px;" alt="">
+    <img src="/img/map.jpg" style="width:100%; margin: 0;" alt="">
+    <h2 style="background-color:dimgray; color: white; line-height: 50px; height: 50px; text-align: center; margin:0; ">카카오맵 바로가기</h2>
+    
+    <div style="text-align: center; font-weight:600; line-height: 2; padding-top: 40px; padding-bottom: 40px;">
+    <p> 소풍컨벤션웨딩 7층 라온제나홀 <br>
+    경기 부천시 송내대로 239 <br>
+    032-624-7777</p>
+
+    <p style="padding-top: 20px;" > 버스안내 <br>
+    일반: 5-6, 23-2, 23-5, 37, 50-1, 52 <br>
+    70, 87, 6-2, 56, 59, 59-1, 61, 66</p>
+         
+    <p style="padding-top: 20px;" > 광역: 302, 700, 780, 1001, 5000, <br>
+    8106, 9300, 8906, 9008</p>
+
+    <p style="padding-top: 20px;"> 자가용안내 <br>
+    "소풍컨벤션웨딩" 검색</p>
+        
+    <p style="padding-top: 20px;"> 지하철안내 <br>
+    7호선 상동역 - 1번출구 - 도보2분 <br>
+    1호선 송내역 - 2번출구 - 27번 버스</p>
+    </div>    
+    <div style="background-color:lightgray; display: flex;">
+        <img class="sns_img" src="/img/btn_facebook.png" alt="facebook">
+        <img class="sns_img" src="/img/btn_twitter.png" alt="facebook">
+        <img class="sns_img" src="/img/btn_kakao.png" alt="facebook">
+        <img class="sns_img" src="/img/btn_story.png" alt="facebook">
+    </div>  
+    <h2 style="
+        background-color: gray;
+        color: #ffffff;
+        font-weight: 600;
+        margin:0;
+        line-height: 60px;
+        height: 60px;
+        text-align: center;" >BHANDS CARD</h2>  
+</body>
+</html>
+
+<!-- 
+    우리가 하는 역할은 디자이너의 의도를 코드로 옮기는 것(3요소가 살도록, 벗어나지 않도록)
+    디자이너가 의도하는 레이아웃, 디자인의 핵심 3요소
+    1.텍스트(레벨,강약 - 중요도, 시각적, 이야기, 타이포 그라피_텍스트를 더 이쁘게 전달하는것)
+    2.이미지(사진이미지 photo, 그린 이미지 illustration, 영상 movie, interctive)
+    3.적절한 여백(margin)   
+
+    css를 만들때 디자인을 어떻게 코드로 효율적으로 잘 옮길까부터 시작했다.
+    디자인을 할 때 정렬을 잘 맞춰야하고 그것을 바탕으로 여백을 잘 맞춰야 한다.
+    모든 요소 하나하나를 보이지 않는 박스에 집어넣자가 결론
+    박스에 기준점이 있어서 여백을 계산하기도 쉽고, 정렬하기도 쉽다.
+
+
+
+
+
+ -->
